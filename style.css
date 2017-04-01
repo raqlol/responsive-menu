@@ -4,7 +4,7 @@ body {
     margin: 0;
     border: 0;
 }
-.nav {
+nav {
   text-align: center;
 	background-color:#000000;
 	position:fixed;
@@ -14,7 +14,7 @@ body {
   top:0;
 }
 
-.nav ul {
+nav ul {
 	background-color:#333333;
 	max-height: 0;
 	overflow: hidden;
@@ -31,7 +31,7 @@ body {
 	height:80px ;
 	margin-top:10px;
 }
-	.nav ul.open-menu{
+	nav ul.open-menu{
 		max-height:inherit;
 		height:100%;
 		width:300px;
@@ -42,7 +42,7 @@ body {
 		z-index:-1;
 		padding:0;
 	}
-.nav ul li{
+nav ul li{
 		display: block;
 		margin-top:35px;
     color: white;
@@ -100,7 +100,6 @@ body {
 #menu-icon.open span:nth-child(1) {
   top: 18px;
   width: 0%;
-  left: 50%;
 }
 
 #menu-icon.open span:nth-child(2) {
@@ -120,20 +119,18 @@ body {
 #menu-icon.open span:nth-child(4) {
   top: 18px;
   width: 0%;
-  left: 50%;
 }
 #menu-icon.open span:nth-child(5) {
   top: 18px;
   width: 0%;
-  left: 50%;
 }
-.nav ul img {
+nav ul img {
     height: 20px;
 }
 .footer {
 	width:100%;
 	position:absolute;
-	bottom:180px;
+	bottom:120px;
 	visibility:hidden;
 	font-size:10px;
 	text-transform:uppercase;
@@ -155,34 +152,43 @@ body {
 	text-transform:uppercase;
 }
 .open-menu .legal, .open-menu .footer { visibility:visible;}
-.nav a {
+nav a {
 	color:#ffffff;
 	font-size:16px;
 	margin-top:18px;
   text-decoration: none;
 }
-@media screen and (max-height: 500px){
-  .nav ul li {
+@media screen and (max-height: 420px){
+  nav {
+    position: absolute;
+  }
+  nav ul {
+    position: absolute;
+  }
+  nav ul li {
     margin-top: 20px;
   }
+  #dropdown {
+    visibility: hidden;
+  }
+  nav ul.open-menu {
+    visibility: visible !important;
+    max-height: 320px;
+    height: 320px;
+    position: absolute;
+  }
   .footer {
-    bottom: 120px;
+    bottom: 10px;
   }
 }
-@media screen and (max-height: 350px){
-  .footer {
-    bottom: inherit;
-  }
-}
-
 @media screen and (max-width: 500px){
 	#menu-icon p { display: none;}
 	#menu-icon {top:35px;}
-  .nav {
+  nav {
     height: 70px;
   }
-  .nav ul.open-menu {
-    width: 200px;
+  nav ul.open-menu {
+    width: 180px;
     top:70px;
   }
   .logo {

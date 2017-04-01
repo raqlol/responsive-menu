@@ -50,15 +50,10 @@ nav ul li{
 #menu-icon {
   width: 82px;
   height: 30px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 #menu-icon p {
     color: #ffffff;
@@ -180,7 +175,12 @@ nav a {
   .footer {
     bottom: 10px;
   }
+  #menu-icon.open {
+    top:120px;
+    right:10px;
+  }
 }
+
 @media screen and (max-width: 500px){
 	#menu-icon p { display: none;}
 	#menu-icon {top:35px;}
@@ -189,7 +189,7 @@ nav a {
   }
   nav ul.open-menu {
     width: 180px;
-    top:70px;
+    top:69px;
   }
   .logo {
     height:50px;
